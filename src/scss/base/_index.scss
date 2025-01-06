@@ -1,0 +1,6 @@
+//Tendra las importaciones de lo que esta en la carpeta base, esta tendra el control de todo a lo que estilo se refiere.
+@forward 'normalize';
+@forward 'variables';
+@forward 'globales';
+
+//Use, cuando requieras utilizar alguna variable. Forward, es para cuando te quieres traer toda la hoja de estilo.

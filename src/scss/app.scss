@@ -1,0 +1,4 @@
+//Conectando todas las importaciones desde una sola hoja que es index.scss con las demas que se encuentran en la carpeta base.
+@forward 'base'; 
+@forward 'layouts';
+ 
