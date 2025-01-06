@@ -1,0 +1,257 @@
+:root {
+    --headingFont: 'PT Sans', sans-serif;
+    --paragraphFont: 'Open Sans', sans-serif;
+    --primary: #784D3C;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light: #E1E1E1;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--paragraphFont);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globals*/
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--headingFont);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+
+/*Utilities*/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.text-center {
+    text-align: center;
+}
+
+
+/*Header*/
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 45rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /*To center the image vertically and horizontally*/
+}
+.header__text {
+    text-align: center;
+    color: var(--white);
+    margin-top: 2.5rem;
+}
+@media (min-width: 768px){
+    .header__text {
+        margin-top: 10rem;
+    }
+}
+.bar {
+    padding-top: 2rem;
+}
+@media (min-width: 768px) {
+    .bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo {
+    color: var(--white);
+}
+.logo__bold {
+    font-weight: 700;
+}
+.logo__text {
+    font-weight: normal;
+}
+@media (min-width: 768px) {
+    .navegation {
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegation__link {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+
+/*Blog*/
+@media (min-width: 768px){
+    .content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+.post {
+    border-bottom: 1px solid var(--light);
+    margin-bottom: 2rem;
+}
+.post:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+.button {
+    display: block;
+    font-family: var(--headingFont);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+@media (min-width: 768px){
+    .button {
+        display: inline-block;
+    }
+}
+.button:hover {
+    cursor: pointer;
+}
+.button--primary {
+    background-color: var(--black);
+}
+.button--secundary {
+    background-color: var(--primary);
+}
+
+.courses {
+    list-style: none;
+}
+.widget-course {
+    border-bottom: 1px solid var(--light);
+    margin-bottom: 2rem;
+}
+.widget-course:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+.widget-course__label, .course__label {
+    font-family: var(--headingFont);
+    font-weight: bold;
+}
+.widget-course__info, .course__info {
+    font-weight: normal;
+}
+.widget-course__label, .widget-course__info, .course__label, .course__info {
+    font-size: 2rem;
+}
+
+/*Footer*/
+.footer {
+    background-color: var(--black);
+    padding-bottom: 2.5rem;
+    margin-top: 2rem;
+}
+
+
+
+/*About Us PG*/
+@media (min-width: 768px){
+    .about-us {
+        display: flex;
+        gap: 3rem;
+
+    }
+    .about-us__img, .about-us__text {
+        flex-basis: 50%;
+    }
+}
+
+
+/*Courses PG*/
+.course {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--light);
+}
+@media (min-width: 768px){
+    .course {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.course:last-child {
+    border: none;
+}
+
+
+/*Contact PG*/
+.contact-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form {
+    background-color: var(--white);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.field {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.field__label {
+    flex: 0 0 9rem;
+    text-align: right;
+}
+.field__input {
+    flex: 1;
+    border: 1px solid var(--light);
+    border-radius: .5rem;
+}
+.field__input--textarea {
+    height: 20rem;
+}
+
+
+/**/
