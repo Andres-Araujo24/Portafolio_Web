@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+    @include m.contenedor();
+
+    &-imagenes {
+        @include m.grid(1, 2rem);
+
+        @include m.telefono {
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(4, 2rem);
+        }
+
+        img {
+            height: 20rem;
+            object-fit: cover; //Algunas no completan el contenedor, esto es para que lo completen y no se queden una corta y otra completa.
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-items: center; //Para que las imagenes se centre tanto vertical como horizontalmente 
+    animation: fadeIn ease-in 0.5s;
+
+    &.fade-out { //Esta clase la agregamos desde el JS
+        animation: fadeOut ease-in 0.5s;
+    }
+
+    img {
+        max-width: 70rem;
+    }
+}
+
+.btn-cerrar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    border: none;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@keyframes fadeIn { //Agregando unas animaciones que van desde un 0% hasta el 100% y se utiliza junto a animation
+    
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut { 
+    
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
