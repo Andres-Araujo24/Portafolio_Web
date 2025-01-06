@@ -1,1 +1,0 @@
-Para tener el node_modules, solo corre esto en la terminal: npm install
