@@ -1,0 +1,22 @@
+{
+    "name": "andre/bienesraices_inicio",
+    "description": "Creando proyecto con POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Andres-Araujo24",
+            "email": "andres.deleon24@outlook.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.11",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./Models",
+            "MVC\\" : "./",
+            "Controllers\\" : "./Controllers"
+        }
+    }
+}
